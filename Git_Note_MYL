@@ -1,5 +1,5 @@
 
-
+++++++++
 
 : a file was deleted on GitHub. I deleted also on my local.  Conflict happened when I git commit. 
 
@@ -8,6 +8,14 @@ Then:
 git pull origin
 
 Solved!
+
+:The detailed :
+  871  git pull origin
+  872  git status
+  873  git add .
+  874  git status
+  875  git commit -m "change formate of BLE_Note"
+  876  git push origin master
 
 
 +++++++++++
