@@ -1,17 +1,23 @@
 
 
 
+: a file was deleted on GitHub. I deleted also on my local.  Conflict happened when I git commit. 
+
+Then:
+
+git pull origin
+
+Solved!
 
 
++++++++++++
 
 To delete a file which has been "git add":
 
 git rm -f BLE_record
 
 
-
 ++++++++++++++++
-
 
 
 MCdeMacBook-Pro:hello-world mc$ git status
