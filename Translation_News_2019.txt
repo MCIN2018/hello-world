@@ -1,6 +1,68 @@
 
 
 
+###################
+20190815
+##################
+
+
+[BBC]China describes Hong Kong protests as 'near terrorism'
+
+
+China has condemned violent clashes in the Hong Kong protests as " behaviour the is close to terrorism - in a sign of its rhetoric hardening.
+
+中国谴责香港看一行动中的暴力冲突是“有恐怖主义倾向的行为”。以此标志着中国方面的态度越发强硬。
+
+
+After days of peaceful protests at HK international airport, clashes with police broke out on Tuesday night.
+
+香港国际机场的抗议游行在最初几天的平静之后，与警察的冲入终于在周二爆发了。
+
+Video showed an officer drawing his gun on protests who beat him with his own truncheon during the disturbance.
+
+从现场的视频可以看到，在混乱中，游行者抢了一名警察的警棍，并用这个警棍袭击他。这名警察掏出枪指着这些袭击他的示威者。
+
+It is the second time in a week that China officials have publicly likened the protests to terrorist activity.
+一周内，这时中国政府第二次公开将这次示威游行比作恐怖活动。
+
+Some observers believe that the repeated use of such language suggests that China is losting patience with the protesters, and could increase the likelihood of an intervention  from Beijing.
+一些观察员认为，中国政府重复使用这样的语言，表明他们正在对这些游行示威者失去耐心，北京会介入的可能性可能会增大。
+
+
+The US said it was "deeply concerned by the reports of Chinese paramilitary movement along Hong Kong border" and urged China to respect Hong Kong's high degree of autonomy 
+美国方面表示，他们“对中国在香港边界的准军事行动表示震惊”，并催促中国尊重香港的高度自治。
+
+#
+#Concerned with" means "relating to", "involved with": This report is concerned with #technical details. "concerned by" (or "concerned about") means "worried by", "troubled #by": I'm concerned by the increase in traffic accidents.
+
+
+However, most analysts consider that at this stage, a direct military intervention is still unlikely. 
+然而，大部分的分析家认为，目前来看，直接的军事介入并不太可能发生。
+
+
+The former British colony has a special status, with its own legal system and judiciary, and rights and freedoms not seen in mainland China. However, many activities believe it is now under threat.
+香港作为前英国殖民地，拥有独立的立法与司法系统，并有着中国大陆居民无法企及的自由和权利。然而，许多活动价们认为，这些特权正在经受着威胁。
+
+Millions of Hong Kong citizens have taken part in 10 weeks anti-government protests, demanding democratic reform, and an investigation into alleged police brutality.While many  of demonstrations were peaceful, an increasing number have ended in violent clashes with police.
+数百万香港民众参加了持续十周的反政府抗议，要求民主改革，并对被他们描述成“残酷”的警察行为展开调查。在大部分的游行活动都很平静的进行过程中，越来越多的游行却开始演变成了与警察的冲突。
+
+
+The last protest, an "occupation " of the airport, led to hundreds of flights being cancelled after protesters escalated their action, thought normal service has been resumed.
+最近的一次抗议游行占领了机场，随着示威行动越演越烈，尽管基本服务已经恢复，但却导致了数百航班被迫取消。
+
+But China seized on the brief outbreak of violence as evidence of "violent crimes" that " breached legal and moral bottom lines".
+但是中国抓住周末爆发的短暂暴力冲突不放，说这是“暴力犯罪”，“已经违背了法律与道德底线”。
+
+
+【Words For Today】
+at this stage：	 目前。
+judiciary: 	司法系统
+Legal system:	立法系统。
+alleged: 	so-called, claimed, unproven, 宣称的，没被证实的。
+Escalate: 	逐步上升，逐步升高 increase rapidly. 
+Breach: 	 违背，违反（动名均可） An act of braking or failing to observe a law, agreement, or code of conduct.
+concerned by" (or "concerned about") 	means "worried by", "troubled #by": I'm concerned by the increase in traffic accidents.
+
 
 ################
 20190814
@@ -21,8 +83,8 @@ They believe humans shouldn't have children.who are the anti-natalists and how f
 
 
 
-Thomas, 29, lives in the east of England, and although his idea of blowing up the world is something of a thought experiment, he
-is certain about one thing - humans should not have babies ,and our species should gradually go extinct. 
+Thomas, 29, lives in the east of England, and although his idea of blowing up the world is something of a thought experiment,
+ he is certain about one thing - humans should not have babies ,and our species should gradually go extinct. 
 住在英格兰东部，29岁的托马斯，尽管他的“把地球凿一个洞”的想法仅能算做一项思想实验，另一件事他却十分确信：人类不应该繁衍后代，我们的种族应该逐渐灭绝。
 
 It's a philosophy called anti-natalism. While the idea dates back to Ancient Greek, it has recently 
@@ -34,11 +96,13 @@ On Facebook and Reddit, there are dozens of anti-natalist groups, some with thou
  r/antinatalism has nearly  35,000 members, while one of the dozens of Facebook groups with an anti-natalist theme 
 has more than 6,000.
 
-Facebook 和Reddit上，都有几十个反生育者小组，有些组员都有几千人。 Reddit上的r/antinatalism, 成员将尽3万5千人。Facebook上的仅仅一个组，成员就超过了6千多人。
+Facebook 和Reddit上，都有几十个反生育者小组，有些组员都有几千人。 Reddit上的r/antinatalism, 成员将尽3万5千人。Facebook上的仅仅一个组，
+成员就超过了6千多人。
 这样的组Facebook上有几十个。
 
 They are scattered around the world and have a variety of reasons for theirs beliefs. Among them are concerns about 
-genetic inheritance, not wanting children to suffer, the concept of consent, and worries about overpopulation and the environment.
+genetic inheritance, not wanting children to suffer, the concept of consent, and worries about overpopulation and the 
+environment.
 这些小组在世界上传播开来，为他们的观点提供了众多的理由。比如，出于对基因遗传的考虑，不想孩子受苦，出生并没有得到孩子的许可，对人口过剩和环境资源的担心。
 
 
@@ -47,14 +111,14 @@ But they are united in their desire to stop human procreation. And although they
 
 他们因为对人类停止繁殖后代的共同愿望而联合在一起。尽管只是边缘运动，其中的某些观点，尤其是与地球现状相关的观点，正不断渗透入主流价值观的讨论当中。
 
-While not a anti-natalist, the Duke of Sussex recently said he and his wife were planning to have a maximum of two children,
-because of environmental concerns.
+While not a anti-natalist, the Duke of Sussex recently said he and his wife were planning to have a maximum of two
+ children, because of environmental concerns.
 
  Sussex 公爵尽管并不是反生育者，但近期他仍然说，出于对环境问题的考虑，他和妻子决定最多只要两个孩子。
 
 Thomas hadn't heard of anti-natalism before someone used the term to describe his views in a Facebook comments thread 
-A few years ago.Since then, he's become an active member of an anti-natalist Facebook group. It provides him with intellectual
-Stimulation and a place to test his debating skills.
+A few years ago.Since then, he's become an active member of an anti-natalist Facebook group. It provides him with 
+intellectual Stimulation and a place to test his debating skills.
 
  Thomas 在别人用反生育者在一个fackbook帖子里描述他之前，并没听说说这个词。从那以后，他就成了一个Facebook小组里的活跃成员。在那里，他可以被激处灵感，
 也能锻炼辩论技巧。
@@ -80,8 +144,8 @@ Chance of disability, or even to low-income parents. At times the rhetoric sound
 The anti-natalists we spoke to had mixed feelings about those ideas.
 我们采访的这些人中，对这些观点的感觉也各异。
 
-"What are their motives behind having a baby?"says Thomas, when asked if he's concerned about children being born in war-torn
-Areas." In such a country there is less hope that things are going to turn around."
+"What are their motives behind having a baby?"says Thomas, when asked if he's concerned about children being born 
+in war-torn Areas." In such a country there is less hope that things are going to turn around."
 
 ”在这些地区的人想生孩子的动机是什么呢？“当被问到他对战争区域出生的孩子的观点时，Thomas这样说到。”在这些地区，情况好转的希望很渺茫啊。“
 
@@ -92,8 +156,8 @@ He's more relaxed about children being born into low-income households.
 “很明显我反对生孩子，但我想及时生多在低收入区域，人仍然可以活得快乐。”
 
 
-“My anti-natalism is across the board," states Nancy.She opposes eugenics. " why are we picking and choosing some groups because 
-They are in a position of disadvantage?"
+“My anti-natalism is across the board," states Nancy.She opposes eugenics. " why are we picking and choosing some 
+groups because They are in a position of disadvantage?"
 
 我的反生育理论并没有具体针对的群体。nancy说。 她不赞成种族选择。为什么我们要单独强调某些群体，仅仅因为他们处在不利的条件下呢？
 
@@ -117,7 +181,8 @@ They are in a position of disadvantage?"
 
 [BBC]Hong Kong protests:Airport cancels flights as thousands occupy.
 
-##Hongkong international Airport cancelled all departures on Monday,as thousands of anti-government protesters occupied and caused disruption.
+##Hongkong international Airport cancelled all departures on Monday,as thousands of anti-government protesters 
+occupied and caused disruption.
 由于大量反对政府的抗议者聚集在机场，并造成了机场服务的中断，香港国际机场已经取消了所有在周一出港的航班。
 
 
@@ -129,13 +194,16 @@ In a statement, officials blamed "seriously disrupted" operations.
 
 官方已宣称该运动“具有严重破坏意义”
 
-Many of those protesting are critical of the actions of police, who on Sunday were filmed firing tear gas and rubber bullets at close range.
+Many of those protesting are critical of the actions of police, who on Sunday were filmed firing tear gas and rubber
+ bullets at close range.
 抗议主要针对警察在周日的行为。他们用催泪瓦斯弹和橡皮子弹进行了近距离袭击的行为已经被录制了下来。
 
-Some protesters wore bandages over their eyes in response to images of a woman heavily bleeding from her eye on Sunday, having reportedly been shot by a police porjectile.
+Some protesters wore bandages over their eyes in response to images of a woman heavily bleeding from her eye on Sunday,
+ having reportedly been shot by a police porjectile.
 根据报道，周日一名女性被警方射伤眼睛，导致眼睛大量流血。作为呼应，许多示威者眼睛上带着绑带。
 
-In a statement on Monday, Hong Kong's Airport Authority said they were cancelling all flights that were not yet checked in. 
+In a statement on Monday, Hong Kong's Airport Authority said they were cancelling all flights that were not yet 
+checked in. 
 香港机场负责人在周一的声明中表示，他们已取消了所有尚未办理登机的航班。
 
 More than 160 flights scheduled to leave after 18:00 local time (10:00 GMT) will now not depart.
@@ -150,23 +218,29 @@ officials are now working on reopen the airport by 6:00 Tuesday ,a statement sai
 
 声明表示，工作人员正努力争取周日早6点前恢复机场正常运营。
 
-Some passengers expressed annoyance at the disruption. "It's very frusting and scary for some people." One passenger from Pakistan told the BBC. " We'll have to wait for our next flight."
+Some passengers expressed annoyance at the disruption. "It's very frusting and scary for some people." 
+One passenger from Pakistan told the BBC. " We'll have to wait for our next flight."
 许多生成对这场中断表示愤怒。以为来自巴基斯坦的乘客说：“对许多人来说，真是太无奈、太可怕了。我们不得不一直等着，直到下一班航班。“
 
-Helena Morgan, from the UK, said she was set to return to the UK to get her exam results on Thursday. " I'm hoping we get back for them and we're not on a flight" she said
+Helena Morgan, from the UK, said she was set to return to the UK to get her exam results on Thursday. " 
+I'm hoping we get back for them and we're not on a flight" she said
 来自英国的HM要在周四回去查考试成绩。 她说：“我真希望???????'
 
-But others were more understanding of the protests. " I was excepting something, given all the news", one arrival, Gurinda Singh, told Reuters news agency.
+But others were more understanding of the protests. " I was excepting something, given all the news", 
+one arrival, Gurinda Singh, told Reuters news agency.
 
 但其他乘客还是对抗议活动表示理解。到港乘客GS告诉路透社：“？？？？？？？？？”；
 
-As rumours spread that police plan to move in on protests on Monday evening,  thousands opted to leave on foot. There are large backlogs for transport back into the center, local reports say.
+As rumours spread that police plan to move in on protests on Monday evening,  thousands opted to leave on foot.
+ There are large backlogs for transport back into the center, local reports say.
 据说警察会在周一傍晚介入，许多游行者因此选择步行离开机场。当地报道成，积压的人流给回城的交通带来巨大压力。
 
-The BBC's Stephen McDonell, who is at the scene, says the airport has effectively shut down while authorities work out how to deal with the iris.
+The BBC's Stephen McDonell, who is at the scene, says the airport has effectively shut down while authorities 
+work out how to deal with the iris.
 在现场的BBC记者 SM 说，机场服务关闭得很高效，机场人员也同在寻找对策化解危机。
 
-Hongkong's mass demonstrations and unrest show no sign of abating, more than two months after they were sparked by a controversial extradition bill.
+Hongkong's mass demonstrations and unrest show no sign of abating, more than two months after they were sparked 
+by a controversial extradition bill.
 
 香港的这场大型示威骚乱，因为一项争议的印度法案引起，已经持续两个多月，仍没有减退的迹象。
 
