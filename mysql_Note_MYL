@@ -1,0 +1,24 @@
+Mysql_Note
+
+
+
+###mysql登陆出现这样的问题：
+
+sh-3.2# mysql -u root -p
+sh: mysql: command not found
+​
+解决如下：
+​
+sh-3.2# cd ~  //进入根目录
+sh-3.2# pwd
+/var/root
+sh-3.2# ls -a .bash*。//看一看.bash_file文件在不在。不在就建一个。
+.bash_history	.bash_profile
+sh-3.2# more .bash_profile
+PATH=$PATH:/usr/local/mysql/bin //看看这行有没有，没有就加上。
+sh-3.2# mysql -u root -p
+sh: mysql: command not found
+sh-3.2# source ~/.bash_profile  //然后执行一下。就解决了。
+sh-3.2# mysql -u root -p
+Enter password: 
+*****************
