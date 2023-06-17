@@ -2,6 +2,23 @@ Mysql_Note
 
 
 
+
+
+
+select VERSION(),CURRENT_TIME;
+
+select sin(pi()/4),(4+1)*5;
+
+select version();select now();
+
+
+mysql> select
+    -> user()
+    -> ,
+    -> current_date;
+
+
+
 ###mysql登陆出现这样的问题：
 
 sh-3.2# mysql -u root -p
@@ -22,3 +39,15 @@ sh-3.2# source ~/.bash_profile  //然后执行一下。就解决了。
 sh-3.2# mysql -u root -p
 Enter password: 
 *****************
+
+
+
+
+
+
+
+
+
+
+
+
