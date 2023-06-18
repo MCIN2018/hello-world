@@ -1,28 +1,40 @@
 
 
 
++++++++++++++++++++++++++++++++
 
- ++++++
+如何从把别人的代码库从Github提取到自己手上？
+
+1: 在别人的库目录页面，点击fork，相应的代码库就会在自己的Github获得一个副本。
+
+2: 在自己的电脑上，clone 这个自己的副本，就在本机获得了这个代码库。
+
+git clone git@github.com:MY-OWN-GITHUB-ID/Respority-of-the-other
+
+
+ +++++++++++++++++++++++++++++++
+
  2023-06-17 To back to use Git:
-  1,2 平时也不会用。
-  1: to 创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录
-  2: 通过git init命令把这个目录变成Git可以管理的仓库：git init
+
+1,2 平时也不会用。
+1: to 创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录
+2: 通过git init命令把这个目录变成Git可以管理的仓库：git init
 
    重新开始：
-   1: 添加
+1: 添加
     git add file1.txt
     Git commit -m "comments"
 
-   2: 检查状态：
+2: 检查状态：
      Git status
     
      查看区别：
      Git diff 
 
-  3: git log. 查看都有哪些修改变化
+3: git log. 查看都有哪些修改变化
      （ git log --pretty=oneline  　简化输出）
 
-  4； 回退到上一个版本
+4； 回退到上一个版本
   git reset --hard HEAD^
   上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100
  
@@ -30,23 +42,23 @@
 
   git reset --hard 3628164 （ comment id)
 
-   5: git reflog 
+5: git reflog 
    Git提供了一个命令git reflog用来记录你的每一次命令：
 
-  6: 提交后，用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别：
+6: 提交后，用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别：
 
-  7:
+7:
    Git会告诉你，git checkout -- file可以丢弃工作区的修改： ( 没有add,也没有 commit的时候）
    use "git checkout -- <file>..." to discard changes in working directory
    git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令
 
- 8: （ 已经add,还没从commit时）
+8: （ 已经add,还没从commit时）
   用命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区：
 
 (use "git reset HEAD <file>..." to unstage)
   git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。
 
- 9： 删除文件：
+9： 删除文件：
     9.1: rm file (物理删除）
     9.2: 确实想删除：  git rm删掉；并且git commit
          反悔了，另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
@@ -78,15 +90,35 @@
        关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
        此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
 
-13: 克隆
-    
- 	git clone git@github.com:MCIN2018/2022-Machine-Learning-Specialization
-
 14; 创建分支，然后切换到分支
 	git checkout -b MC_b1
 	查看当前分支：git branch
 
 
+
+
+
+//////////////
+插一条：
+长时间没用Github了，在git push origin master 时，出现：
+
+  WARNING: POSSIBLE DNS SPOOFING DETECTED! 
+
+解决方案：
+1:   cd ~/.ssh
+    把known_hosts里github那行信息，删除或者注视掉（我选择了注释掉）
+2:再运行 　git push origin master 出现：
+     The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no)? 
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,20.205.243.166' (ECDSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+
+3: 上述问题，需要在Github上更新公钥。更新后再运行就好了。
 
 mc-Sat Jun 17-14:57$ git push origin master
 The authenticity of host 'github.com (20.205.243.166)' can't be established.
@@ -103,8 +135,6 @@ and the repository exists.
 @       WARNING: POSSIBLE DNS SPOOFING DETECTED!  
 
 
-
-
 mc-Sat Jun 17-15:06$ git push origin master
 Counting objects: 7, done.
 Delta compression using up to 4 threads.
@@ -115,10 +145,9 @@ remote: Resolving deltas: 100% (2/2), completed with 1 local object.
 To github.com:MCIN2018/hello-world
    62d5e16..8906eb0  master -> master
 
+///////////////
 
-打开known_hosts文件，删除其中的内容，或者删除该文件（这一做法本人未使用，不敢确定），然后在git上执行命令：
 
-ssh -keygen -t rsa -C "account email"
 
 
 

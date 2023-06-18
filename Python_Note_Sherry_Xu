@@ -1,0 +1,81 @@
+
+
+
+++++++++++++++++
+
+在Mac上安装Jupyter 
+
+ 的手忙脚乱的过程。。。。。。。
+
+1: Set up Jupiter
+
+   #pip3 install jupyter
+   pip3 install --user jupyter
+
+   出现这样的信息：
+  WARNING: The script wsdump is installed in '/Users/*/Library/Python/3.11/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+
+2:  运行： python3 -m IPython notebook
+
+   出现这样的错误：
+
+   [TerminalIPythonApp] WARNING | File 'notebook' doesn't exist
+
+
+   运行这两条，也不行：
+   jupyter --version
+
+   jupyter notebook --version
+
+   但写全路径可以： /Users/*/Library/Python/3.11/bin/jupyter --version
+
+
+
+  一说是因为环境变量的设置。 测试可行的策略是： 
+
+  在 ~/.bash_profile 添加环境变量：
+
+   /Users/mydirectory/Library/Python/3.11/bin
+
+
+	export PATH="${PATH}:/Users/mydirectory/Library/Python/3.11/bin"
+	export PYTHONPATH="${PYTHONPATH}:/Users/mydirectory/Library/Python/3.11/bin"
+
+
+	其中第二条也可以用下面的别名方式代替：
+
+	alias jupyter='/Users/mydirectory/Library/Python/3.11/bin/jupyter'
+
+	随后：source ~/.bash_profile
+
+
+3:   此时，下列命令已经可以显示：
+      	jupyter --version
+	jupyter notebook --version
+
+    然而， python3 -m IPython notebook 仍显示 [TerminalIPythonApp] WARNING | File 'notebook' doesn't exist
+    jupyter仍无法启动。
+
+4: 每次都得 source ~/.bash_profile  ：-（
+
+5: jupyter --help 可以查各项命令路径等。
+
+6： 事实证明， 启动是可以这样的：：：：：：：：：：：：：真是若不自宫，也可练功啊！ 一下午替调了个寂寞！
+
+   jupyter-notebook
+
+（http://localhost:8888/tree）
+
+   
+
+7: Mac两种shell的切换：
+
+
+
+chsh -s /bin/zsh
+
+chsh -s /bin/bash
+
+
