@@ -109,10 +109,10 @@ git clone git@github.com:MY-OWN-GITHUB-ID/Respority-of-the-other
     把known_hosts里github那行信息，删除或者注视掉（我选择了注释掉）
 2:再运行 　git push origin master 出现：
      The authenticity of host 'github.com (20.205.243.166)' can't be established.
-ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+ECDSA key fingerprint is ***
 Are you sure you want to continue connecting (yes/no)? 
 Please type 'yes' or 'no': yes
-Warning: Permanently added 'github.com,20.205.243.166' (ECDSA) to the list of known hosts.
+Warning: Permanently added '***.
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
@@ -122,10 +122,10 @@ and the repository exists.
 
 mc-Sat Jun 17-14:57$ git push origin master
 The authenticity of host 'github.com (20.205.243.166)' can't be established.
-ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+ECDSA key fingerprint is ***.
 Are you sure you want to continue connecting (yes/no)? 
 Please type 'yes' or 'no': yes
-Warning: Permanently added 'github.com,20.205.243.166' (ECDSA) to the list of known hosts.
+Warning: Permanently added '***' (ECDSA) to the list of known hosts.
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 
@@ -235,7 +235,7 @@ git push -u origin perl_4_example
 1: Guthub:https://github.com
 
  MCIN2018 : GitHub name 
- myl2012@hotmail.com/T12…..a
+ my...@hotmail.com//^[A-Z][0-9].[A-Z]$/
 
 1.1. Create Github account and first repository hello-world
 
@@ -269,7 +269,7 @@ To add a new repositories : ( this is not a good example.  The folder on Github 
 
   
 
-Git clone git@github.com:MCIN2018/resource. : This will become /users/mc/resource/resource!!!!  Be careful, to make sure the structure of your folders. 
+Git clone git@github.com:MCIN2018/resource. : This will become /users/*/resource/resource!!!!  Be careful, to make sure the structure of your folders. 
 
 
  After this operation, go to 3:
@@ -281,7 +281,7 @@ git remote add origin git@github.com:MCIN2018/resource
 
 +++ output: 
 MCdeMacBook-Pro:resource mc$ pwd
-/users/mc/resource/resource
+/users/*/resource/resource
 MCdeMacBook-Pro:resource mc$ git remote add origin git@github.com:MCIN2018/resource
 fatal: remote origin already exists.
 
@@ -369,8 +369,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 
 : git checkout -- perl/10_file.pl
-MCdeMacBook-Pro:codes mc$ ls -l perl/10_file.pl
--rwxr-xr-x  1 mc  staff  1028 Feb 28 18:54 perl/10_file.pl
+MCdeMacBook-Pro:codes --$ ls -l perl/10_file.pl
+-rwxr-xr-x  1 --  staff  1028 Feb 28 18:54 perl/10_file.pl
 
 : then , the first file is recovered 
 
