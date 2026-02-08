@@ -1,0 +1,499 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小波，生日快乐！</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a6b3c 0%, #f9d71c 50%, #2c82c9 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* 气球容器 */
+        .balloons-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            border-radius: 50%;
+            bottom: -100px;
+            animation: floatUp linear infinite;
+            box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .balloon:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background-color: #fff;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .balloon.green {
+            background: radial-gradient(circle at 30% 30%, #4CAF50, #1B5E20);
+        }
+        
+        .balloon.yellow {
+            background: radial-gradient(circle at 30% 30%, #FFEB3B, #F57F17);
+        }
+        
+        .balloon.blue {
+            background: radial-gradient(circle at 30% 30%, #2196F3, #0D47A1);
+        }
+        
+        /* 生日卡片 */
+        .birthday-card {
+            width: 90%;
+            max-width: 800px;
+            height: 550px;
+            background-color: rgba(255, 255, 255, 0.93);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 卡片头部 */
+        .card-header {
+            background: linear-gradient(to right, #2c82c9, #4CAF50, #FFEB3B);
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-header h1 {
+            color: white;
+            font-size: 3.2rem;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            animation: titleGlow 2s infinite alternate;
+        }
+        
+        /* 卡片主体内容 */
+        .card-content {
+            flex: 1;
+            display: flex;
+            padding: 25px;
+        }
+        
+        /* 照片轮播区 */
+        .photo-slider {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            min-height: 350px; /* 只加这一行！ */
+        }
+        
+        .photo-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .photo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center; /* 确保居中 */
+
+            opacity: 0;
+            transition: opacity 1.5s ease;
+            border-radius: 15px;
+        }
+        
+        .photo.active {
+            opacity: 1;
+        }
+        
+        /* 祝福语区域 */
+        .greeting-area {
+            flex: 1;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .greeting-text {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+        
+        .greeting-text h2 {
+            color: #1B5E20;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .greeting-text p {
+            color: #333;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* 祝福语强调 */
+        .highlight {
+            color: #0D47A1;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* 按钮区域 */
+        .button-area {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s forwards 1s;
+        }
+        
+        .action-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        
+        .play-btn {
+            background: linear-gradient(to right, #4CAF50, #2c82c9);
+            color: white;
+        }
+        
+        .replay-btn {
+            background: linear-gradient(to right, #FFEB3B, #F57F17);
+            color: #333;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 卡片页脚 */
+        .card-footer {
+            height: 60px;
+            background: linear-gradient(to right, #FFEB3B, #4CAF50, #2c82c9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        
+        /* 动画定义 */
+        @keyframes floatUp {
+            from {
+                transform: translateY(0) rotate(var(--rotation));
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh) rotate(calc(var(--rotation) + 20deg));
+                opacity: 0;
+            }
+        }
+        
+        @keyframes titleGlow {
+            from {
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            }
+            to {
+                text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .birthday-card {
+                height: auto;
+                min-height: 550px;
+            }
+            
+            .card-content {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .photo-slider {
+                height: 250px;
+                margin-bottom: 20px;
+            }
+            
+            .greeting-area {
+                padding-left: 0;
+            }
+            
+            .card-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 气球容器 -->
+    <div class="balloons-container" id="balloonsContainer"></div>
+    
+    <!-- 生日卡片 -->
+    <div class="birthday-card">
+        <!-- 卡片头部 -->
+        <div class="card-header">
+            <h1>姐姐，生日快乐！</h1>
+        </div>
+        
+        <!-- 卡片主体内容 -->
+        <div class="card-content">
+            <!-- 照片轮播区 -->
+            <div class="photo-slider">
+                <div class="photo-container">
+                    <!-- 这里用背景图片模拟照片，实际应用中可替换为真实照片 -->
+
+                     <div class="photo active" style="background-image: url('5.jpg');"></div>
+                     <div class="photo active" style="background-image: url('7.jpg');"></div>
+                    <div class="photo active" style="background-image: url('12.jpg');"></div>
+                    <div class="photo active" style="background-image: url('8.jpg');"></div>
+
+                   
+                </div>
+            </div>
+            
+            <!-- 祝福语区域 -->
+            <div class="greeting-area">
+                <div class="greeting-text">
+                    <h2>祝福小波</h2>
+                    <p>
+                        <span class="highlight"><h2>勇敢、乐观、自信!</h2></span><br><br>
+                        愿每一天都充满阳光；<br>
+                        愿每一天都更热爱自己，热爱这个世界！
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- 卡片页脚 -->
+        <div class="card-footer">
+            <p>愿你的生日充满欢乐与美好！</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const balloonsContainer = document.getElementById('balloonsContainer');
+            const photos = document.querySelectorAll('.photo');
+            const playBtn = document.getElementById('playBtn');
+            const replayBtn = document.getElementById('replayBtn');
+            const cardTitle = document.querySelector('.card-header h1');
+            
+            // 创建气球
+            function createBalloons(count) {
+                const colors = ['green', 'yellow', 'blue'];
+                
+                for (let i = 0; i < count; i++) {
+                    const balloon = document.createElement('div');
+                    balloon.className = `balloon ${colors[Math.floor(Math.random() * colors.length)]}`;
+                    
+                    // 随机位置
+                    const left = Math.random() * 100;
+                    balloon.style.left = `${left}%`;
+                    
+                    // 随机大小
+                    const size = 40 + Math.random() * 40;
+                    balloon.style.width = `${size}px`;
+                    balloon.style.height = `${size * 1.3}px`;
+                    
+                    // 随机浮动速度和延迟
+                    const duration = 10 + Math.random() * 15;
+                    const delay = Math.random() * 5;
+                    const rotation = Math.random() * 30 - 15;
+                    
+                    balloon.style.setProperty('--rotation', `${rotation}deg`);
+                    balloon.style.animation = `floatUp ${duration}s linear ${delay}s infinite`;
+                    
+                    balloonsContainer.appendChild(balloon);
+                }
+            }
+            
+            // 初始化气球
+            createBalloons(25);
+            
+            // 照片轮播逻辑
+            let currentPhotoIndex = 0;
+            
+            function rotatePhotos() {
+                photos[currentPhotoIndex].classList.remove('active');
+                currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+                photos[currentPhotoIndex].classList.add('active');
+            }
+            
+            // 自动轮播照片
+            let photoInterval = setInterval(rotatePhotos, 3000);
+            
+            // 播放祝福效果
+            function playBlessings() {
+                // 清除现有气球
+                balloonsContainer.innerHTML = '';
+                
+                // 创建更多气球
+                createBalloons(50);
+                
+                // 添加标题动画
+                cardTitle.style.animation = 'pulse 1s ease 3, titleGlow 2s infinite alternate';
+                
+                // 重置照片轮播
+                clearInterval(photoInterval);
+                for (let i = 0; i < photos.length; i++) {
+                    photos[i].classList.remove('active');
+                }
+                photos[0].classList.add('active');
+                photoInterval = setInterval(rotatePhotos, 1500);
+                
+                // 显示提示
+                showMessage('祝福已播放！点击重新播放按钮可再次观看效果。');
+            }
+            
+            // 重新播放功能
+            function replayBlessings() {
+                // 清除现有气球
+                balloonsContainer.innerHTML = '';
+                
+                // 创建气球
+                createBalloons(50);
+                
+                // 重新触发标题动画
+                cardTitle.style.animation = 'none';
+                setTimeout(() => {
+                    cardTitle.style.animation = 'pulse 1s ease 3, titleGlow 2s infinite alternate';
+                }, 10);
+                
+                // 重置照片轮播
+                clearInterval(photoInterval);
+                for (let i = 0; i < photos.length; i++) {
+                    photos[i].classList.remove('active');
+                }
+                photos[0].classList.add('active');
+                photoInterval = setInterval(rotatePhotos, 1500);
+                
+                // 显示提示
+                showMessage('祝福再次为你播放！');
+            }
+            
+            // 显示临时消息
+            function showMessage(message) {
+                // 移除可能存在的旧消息
+                const oldMessage = document.querySelector('.temp-message');
+                if (oldMessage) oldMessage.remove();
+                
+                // 创建新消息
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'temp-message';
+                messageDiv.textContent = message;
+                messageDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    padding: 12px 25px;
+                    border-radius: 50px;
+                    z-index: 1000;
+                    font-weight: bold;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                    animation: fadeInOut 3s ease;
+                `;
+                
+                document.body.appendChild(messageDiv);
+                
+                // 3秒后移除消息
+                setTimeout(() => {
+                    messageDiv.style.opacity = '0';
+                    messageDiv.style.transition = 'opacity 0.5s';
+                    setTimeout(() => messageDiv.remove(), 500);
+                }, 2500);
+            }
+            
+            // 添加CSS动画
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeInOut {
+                    0% { opacity: 0; transform: translate(-50%, -20px); }
+                    15% { opacity: 1; transform: translate(-50%, 0); }
+                    85% { opacity: 1; transform: translate(-50%, 0); }
+                    100% { opacity: 0; transform: translate(-50%, -20px); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // 绑定按钮事件
+            playBtn.addEventListener('click', playBlessings);
+            replayBtn.addEventListener('click', replayBlessings);
+            
+            // 初始自动播放祝福
+            setTimeout(playBlessings, 1000);
+        });
+    </script>
+</body>
+</html>
